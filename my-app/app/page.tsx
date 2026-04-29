@@ -1,5 +1,6 @@
 import Header from '@/components/Header';
 import BookingForm from '@/components/BookingForm';
+import Services from '@/components/Services'; // Asegúrate de haber creado este archivo en components/
 
 export default function Home() {
   return (
@@ -19,12 +20,11 @@ export default function Home() {
             Reservar Turno
           </a>
         </div>
-        {/* Overlay sutil para profundidad */}
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-zinc-900/50 via-black to-black"></div>
       </section>
 
-      {/* Services Section Shortened */}
-      <section id="servicios" className="py-24 px-6 bg-white">
+      {/* Info Section (Ambiente y Ubicación) */}
+      <section id="info" className="py-24 px-6 bg-white">
         <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16">
           <div className="border-l-2 border-red-600 pl-6">
             <h3 className="text-2xl font-bold uppercase mb-4 tracking-tighter">EL AMBIENTE</h3>
@@ -43,11 +43,14 @@ export default function Home() {
         </div>
       </section>
 
+      <Services />
+
+      {/* Formulario de Reserva */}
       <BookingForm />
 
       <footer className="py-12 text-center bg-black">
         <p className="text-[10px] uppercase tracking-[0.4em] text-zinc-500">
-          © 2024 Taiwan Barber — Carlos Paz, Argentina
+          © 2026 Taiwan Barber — Villa Santa Cruz del Lago, Córdoba
         </p>
         <p className="text-[9px] text-zinc-700 mt-2 tracking-widest uppercase">
           Minimalist Grooming Experience
