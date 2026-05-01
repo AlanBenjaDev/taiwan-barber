@@ -10,7 +10,7 @@ export default function BookingForm() {
     time: ''
   });
 
-  // Lógica de restricción de Mechas
+ 
   const filteredHours = useMemo(() => {
     const selectedService = SERVICES.find(s => s.id === formData.service);
     if (selectedService?.name === 'Mechas') {
