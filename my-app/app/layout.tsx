@@ -1,14 +1,10 @@
 import type { Metadata, Viewport } from "next";
-import "./globals.css"; // Asegúrate que el archivo esté en /app/globals.css
+import "./globals.css";
+
 export const metadata: Metadata = {
-  title: "Taiwan Barber | Minimalist Grooming",
-  description: "Reserva tu turno en la barbería más exclusiva de estética oriental.",
+  title: "Taiwan Barber | Estética Oriental",
+  description: "Precisión, silencio y arte en cada corte.",
   manifest: "/manifest.json",
-  appleWebApp: {
-    capable: true,
-    statusBarStyle: "black-translucent",
-    title: "Taiwan Barber",
-  },
 };
 
 export const viewport: Viewport = {
@@ -21,9 +17,7 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="es" className="scroll-smooth">
-      <body className="bg-white antialiased text-black">
-        {children}
-      </body>
+      <body className="antialiased bg-black text-white">{children}</body>
     </html>
   );
 }

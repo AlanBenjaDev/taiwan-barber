@@ -2,14 +2,14 @@ export interface Service {
   id: string;
   name: string;
   price: number;
-  duration: string;
 }
 
 export const SERVICES: Service[] = [
-  { id: '1', name: 'Corte', price: 12000, duration: '45 min' },
-  { id: '2', name: 'Corte + Barba', price: 15000, duration: '30 min' },
-  { id: '3', name: 'Mechas', price: 50000, duration: '3 hs' }
-]
+  { id: '1', name: 'Corte de pelo', price: 12000 },
+  { id: '2', name: 'Corte VIP', price: 17000 },
+  { id: '3', name: 'Mechas', price: 40000 },
+  { id: '4', name: 'Mechas VIP', price: 50000 }
+];
 
 export const AVAILABLE_HOURS = [
   '09:00', '10:00', '11:00', '12:00', '13:00', 

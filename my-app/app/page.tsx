@@ -23,7 +23,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-zinc-900/50 via-black to-black"></div>
       </section>
 
-      {/* Info Section (Ambiente y Ubicación) */}
+      
       <section id="info" className="py-24 px-6 bg-white">
         <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16">
           <div className="border-l-2 border-red-600 pl-6">
