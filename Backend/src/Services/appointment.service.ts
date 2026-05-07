@@ -1,4 +1,4 @@
-import pool from '../Config/db.js'; // ajustá el path según tu estructura
+import pool from '../Config/db.js'; 
 
 export const AppointmentService = {
   async create(data: { client_name: string; service_id: number; date: string; time: string }) {
@@ -31,7 +31,7 @@ export const AppointmentService = {
     );
 
     return rows.map((row: any) => ({
-      id: row.id, // <--- AHORA SÍ PASAMOS EL ID AL FRONTEND
+      id: row.id, 
       time: row.appointment_time.substring(0, 5),
       service: row.service_name
     }));

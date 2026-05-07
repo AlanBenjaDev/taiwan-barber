@@ -9,9 +9,3 @@ router.delete('/eliminar/turno/:id', deleteAppointmentById);
 export default router;
 
 
-
-// /api/appointments/crear/turno
-
-// /api/appointments/ver/turnos
-
-//http://localhost:4000/api/appointments/ver/turnos

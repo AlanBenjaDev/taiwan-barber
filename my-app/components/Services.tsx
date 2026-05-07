@@ -4,7 +4,7 @@ export default function Services() {
   return (
     <section id="servicios" className="py-24 px-6 bg-[#fafafa] scroll-mt-20">
       <div className="max-w-6xl mx-auto">
-        {/* Header de Sección */}
+
         <div className="text-center mb-20">
           <h2 className="text-[10px] uppercase tracking-[0.6em] text-zinc-400 mb-4">
             Menu de Autor
@@ -15,10 +15,10 @@ export default function Services() {
           <div className="w-20 h-1 bg-red-600 mx-auto mt-6"></div>
         </div>
 
-        {/* Grid de Servicios */}
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           
-          {/* 01. Cortes de Pelo */}
+
           <article className="group relative border border-black/5 p-8 bg-white hover:border-red-600 transition-all duration-500 shadow-sm hover:shadow-xl">
             <span className="text-red-600 font-serif text-2xl italic mb-6 block opacity-50 group-hover:opacity-100 transition-opacity">01.</span>
             <h4 className="text-xl font-black uppercase mb-4 tracking-tighter group-hover:text-red-600 transition-colors">Cortes de pelo</h4>
@@ -28,7 +28,7 @@ export default function Services() {
             <div className="absolute bottom-0 left-0 h-[2px] w-0 bg-red-600 group-hover:w-full transition-all duration-500"></div>
           </article>
 
-          {/* 02. Corte VIP */}
+
           <article className="group relative border border-black/5 p-8 bg-white hover:border-red-600 transition-all duration-500 shadow-sm hover:shadow-xl">
             <span className="text-red-600 font-serif text-2xl italic mb-6 block opacity-50 group-hover:opacity-100 transition-opacity">02.</span>
             <h4 className="text-xl font-black uppercase mb-4 tracking-tighter group-hover:text-red-600 transition-colors">Corte VIP</h4>
@@ -38,7 +38,7 @@ export default function Services() {
             <div className="absolute bottom-0 left-0 h-[2px] w-0 bg-red-600 group-hover:w-full transition-all duration-500"></div>
           </article>
 
-          {/* 03. Mechas Standard */}
+
           <article className="group relative border border-black/5 p-8 bg-white hover:border-red-600 transition-all duration-500 shadow-sm hover:shadow-xl">
             <span className="text-red-600 font-serif text-2xl italic mb-6 block opacity-50 group-hover:opacity-100 transition-opacity">03.</span>
             <h4 className="text-xl font-black uppercase mb-4 tracking-tighter group-hover:text-red-600 transition-colors">Mechas</h4>
@@ -48,7 +48,7 @@ export default function Services() {
             <div className="absolute bottom-0 left-0 h-[2px] w-0 bg-red-600 group-hover:w-full transition-all duration-500"></div>
           </article>
 
-          {/* 04. Mechas VIP (Destacado en Negro) */}
+   
           <article className="group relative border-2 border-black p-8 bg-black text-white hover:border-red-600 transition-all duration-500 shadow-2xl overflow-hidden">
             <div className="absolute top-0 right-0 bg-red-600 text-[9px] px-4 py-1 uppercase tracking-[0.2em] font-black">
               Top Tier

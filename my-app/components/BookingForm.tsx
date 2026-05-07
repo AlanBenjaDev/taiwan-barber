@@ -6,50 +6,49 @@ export default function BookingForm() {
   const [formData, setFormData] = useState({ name: '', service: '', date: '', time: '' });
   const [occupiedSlots, setOccupiedSlots] = useState<string[]>([]);
   const [loading, setLoading] = useState(false);
-
-  // Fecha mínima: Hoy (Evita turnos en el pasado)
+  const backendUrl = process.env.URL_BACKEND 
   const today = new Date().toISOString().split('T')[0];
 
-  // 1. Efecto Maestro: Cada vez que cambie la fecha, consultamos al Backend
+  
   useEffect(() => {
     const checkAvailability = async () => {
       if (!formData.date) return;
 
       try {
-        // IMPORTANTE: Puerto 4000 según tu última configuración
-        const res = await fetch(`http://localhost:4000/api/appointments/ver/turnos?date=${formData.date}`);
+
+        const res = await fetch(`${backendUrl}/api/appointments/ver/turnos?date=${formData.date}`);
         
         if (!res.ok) throw new Error("Error al obtener disponibilidad");
 
         const data = await res.json();
         
-        // Mapeamos los resultados (ajustamos a 'time' o 'appointment_time' según tu DB)
+       
         const booked = data.map((item: any) => {
           const t = item.appointment_time || item.time;
-          return t.substring(0, 5); // Normalizamos a "HH:mm"
+          return t.substring(0, 5); 
         });
 
         setOccupiedSlots(booked);
       } catch (error) {
         console.error("Fallo en la sincronización de turnos:", error);
-        setOccupiedSlots([]); // Si falla, reseteamos para no bloquear al usuario
+        setOccupiedSlots([]);
       }
     };
 
     checkAvailability();
-  }, [formData.date]); // Se dispara automáticamente al clickear una fecha en el calendario
+  }, [formData.date]); 
 
-  // 2. Filtro de Horas (Reactividad Pura)
+
   const availableHoursFiltered = useMemo(() => {
     const selectedService = SERVICES.find(s => s.id === formData.service);
     let hours = [...AVAILABLE_HOURS];
 
-    // Regla de Negocio: Mechas solo mañana
+  
     if (selectedService?.name.toLowerCase().includes('mechas')) {
       hours = hours.filter(h => parseInt(h.split(':')[0]) <= 13);
     }
 
-    // Filtro de Disponibilidad Real: Solo las que NO están en occupiedSlots
+   
     return hours.filter(h => !occupiedSlots.includes(h));
   }, [formData.service, occupiedSlots]);
 
@@ -58,7 +57,7 @@ export default function BookingForm() {
     setLoading(true);
 
     try {
-      const res = await fetch('http://localhost:4000/api/appointments/crear/turno', {
+      const res = await fetch(`${backendUrl}/api/appointments/crear/turno`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
