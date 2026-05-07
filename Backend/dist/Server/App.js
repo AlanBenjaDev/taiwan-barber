@@ -11,4 +11,3 @@ app.use((0, cors_1.default)());
 app.use(express_1.default.json());
 app.use('/api/appointments', appointment_routes_js_1.default);
 exports.default = app;
-//# sourceMappingURL=App.js.map

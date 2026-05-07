@@ -59,4 +59,3 @@ const deleteAppointmentById = async (req, res) => {
     }
 };
 exports.deleteAppointmentById = deleteAppointmentById;
-//# sourceMappingURL=appointment.controller.js.map

@@ -8,7 +8,3 @@ router.post('/crear/turno', appointment_controller_1.CreateAppointment);
 router.get('/ver/turnos', appointment_controller_1.GetAppointments);
 router.delete('/eliminar/turno/:id', appointment_controller_2.deleteAppointmentById);
 exports.default = router;
-// /api/appointments/crear/turno
-// /api/appointments/ver/turnos
-//http://localhost:4000/api/appointments/ver/turnos
-//# sourceMappingURL=appointment.routes.js.map

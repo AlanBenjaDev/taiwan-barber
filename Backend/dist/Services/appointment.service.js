@@ -4,7 +4,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.AppointmentService = void 0;
-const db_js_1 = __importDefault(require("../Config/db.js")); // ajustá el path según tu estructura
+const db_js_1 = __importDefault(require("../Config/db.js"));
 exports.AppointmentService = {
     async create(data) {
         const { client_name, service_id, date, time } = data;
@@ -21,7 +21,7 @@ exports.AppointmentService = {
        JOIN services s ON a.service_id = s.id 
        WHERE a.appointment_date = ?`, [date]);
         return rows.map((row) => ({
-            id: row.id, // <--- AHORA SÍ PASAMOS EL ID AL FRONTEND
+            id: row.id,
             time: row.appointment_time.substring(0, 5),
             service: row.service_name
         }));
@@ -31,4 +31,3 @@ exports.AppointmentService = {
         return result.affectedRows > 0;
     }
 };
-//# sourceMappingURL=appointment.service.js.map
