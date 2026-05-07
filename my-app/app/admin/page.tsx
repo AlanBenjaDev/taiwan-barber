@@ -2,16 +2,16 @@
 import { useState, useEffect } from 'react';
 
 export default function AdminPanel() {
-  // 1. Iniciamos el estado con la fecha de hoy
+
   const [selectedDate, setSelectedDate] = useState(new Date().toISOString().split('T')[0]);
   const [turnos, setTurnos] = useState([]);
   const [loading, setLoading] = useState(false);
 
-  // 2. Función para traer turnos
+ const backend = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:4000';
   const fetchTurnos = async () => {
     setLoading(true);
     try {
-      const res = await fetch(`http://localhost:4000/api/appointments/ver/turnos?date=${selectedDate}`);
+      const res = await fetch(`${backend}/api/appointments/ver/turnos?date=${selectedDate}`);
       if (!res.ok) throw new Error("Error en la petición");
       const data = await res.json();
       setTurnos(data);
@@ -23,7 +23,6 @@ export default function AdminPanel() {
     }
   };
 
-  // 3. Este efecto se dispara cada vez que selectedDate cambia
   useEffect(() => {
     fetchTurnos();
   }, [selectedDate]);
@@ -32,11 +31,11 @@ export default function AdminPanel() {
     if (!confirm("¿Estás seguro de que querés eliminar este turno? Esta acción no se puede deshacer.")) return;
     
     try {
-      const res = await fetch(`http://localhost:4000/api/appointments/eliminar/turno/${id}`, {
+      const res = await fetch(`${backend}/api/appointments/eliminar/turno/${id}`, {
         method: 'DELETE'
       });
       if (res.ok) {
-        fetchTurnos(); // Refrescamos la lista tras borrar
+        fetchTurnos(); 
       }
     } catch (error) {
       alert("No se pudo eliminar el turno");
@@ -54,7 +53,7 @@ export default function AdminPanel() {
             <p className="text-zinc-500 text-xs uppercase tracking-widest mt-1">Taiwan Barber Admin</p>
           </div>
 
-          {/* SELECTOR DE FECHA */}
+    
           <div className="bg-zinc-900 p-4 border border-zinc-800 rounded-lg">
             <label className="text-[10px] uppercase tracking-widest text-zinc-400 block mb-2">Filtrar por fecha</label>
             <input 
