@@ -6,7 +6,7 @@ export default function BookingForm() {
   const [formData, setFormData] = useState({ name: '', service: '', date: '', time: '' });
   const [occupiedSlots, setOccupiedSlots] = useState<string[]>([]);
   const [loading, setLoading] = useState(false);
-  const backendUrl = process.env.URL_BACKEND 
+  const backendUrl = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:4000';
   const today = new Date().toISOString().split('T')[0];
 
   
