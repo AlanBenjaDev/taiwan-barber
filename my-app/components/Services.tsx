@@ -23,7 +23,7 @@ export default function Services() {
             <span className="text-red-600 font-serif text-2xl italic mb-6 block opacity-50 group-hover:opacity-100 transition-opacity">01.</span>
             <h4 className="text-xl font-black uppercase mb-4 tracking-tighter group-hover:text-red-600 transition-colors">Cortes de pelo</h4>
             <p className="text-zinc-500 text-xs leading-relaxed mb-8 uppercase tracking-widest">
-              Diseño personalizado según fisionomía.
+              Corte personalizado a gusto del cliente.
             </p>
             <div className="absolute bottom-0 left-0 h-[2px] w-0 bg-red-600 group-hover:w-full transition-all duration-500"></div>
           </article>
@@ -33,7 +33,7 @@ export default function Services() {
             <span className="text-red-600 font-serif text-2xl italic mb-6 block opacity-50 group-hover:opacity-100 transition-opacity">02.</span>
             <h4 className="text-xl font-black uppercase mb-4 tracking-tighter group-hover:text-red-600 transition-colors">Corte VIP</h4>
             <p className="text-zinc-500 text-xs leading-relaxed mb-8 uppercase tracking-widest">
-              Experiencia completa. Corte, lavado y perfilado de barba.
+              Experiencia completa. Corte, lavado.
             </p>
             <div className="absolute bottom-0 left-0 h-[2px] w-0 bg-red-600 group-hover:w-full transition-all duration-500"></div>
           </article>
@@ -43,7 +43,7 @@ export default function Services() {
             <span className="text-red-600 font-serif text-2xl italic mb-6 block opacity-50 group-hover:opacity-100 transition-opacity">03.</span>
             <h4 className="text-xl font-black uppercase mb-4 tracking-tighter group-hover:text-red-600 transition-colors">Mechas</h4>
             <p className="text-zinc-500 text-xs leading-relaxed mb-8 uppercase tracking-widest">
-              Coloración técnica focalizada. Incluye corte.
+              Mechas esparcidas por el pelo. ideal si  buscas un cambio simple pero efectivo. Incluye corte.
             </p>
             <div className="absolute bottom-0 left-0 h-[2px] w-0 bg-red-600 group-hover:w-full transition-all duration-500"></div>
           </article>
@@ -56,7 +56,7 @@ export default function Services() {
             <span className="text-red-600 font-serif text-2xl italic mb-6 block">04.</span>
             <h4 className="text-xl font-black uppercase mb-4 tracking-tighter">Mechas VIP</h4>
             <p className="text-zinc-400 text-xs leading-relaxed mb-8 uppercase tracking-widest">
-              Coloración total, nutrición profunda y <span className="text-white font-bold underline decoration-red-600">corte de regalo</span>.
+              Mechas más unidas en el pelo y <span className="text-white font-bold underline decoration-red-600">corte de regalo</span>.
             </p>
             <div className="absolute bottom-0 left-0 h-[2px] w-0 bg-red-600 group-hover:w-full transition-all duration-500"></div>
           </article>
@@ -66,8 +66,8 @@ export default function Services() {
         {/* Disclaimer / Info Extra */}
         <div className="mt-16 pt-8 border-t border-black/5 text-center">
           <p className="text-[10px] text-zinc-400 uppercase tracking-[0.4em] leading-loose">
-            * Los servicios VIP y Coloración técnica incluyen <br />
-            lavado profundo, tratamiento de hidratación y peinado final de autor.
+            * Los servicios VIP y Mechas incluyen <br />
+            lavado de pelo y  perfilado de barba.
           </p>
         </div>
       </div>
