@@ -75,7 +75,7 @@ export default function BookingForm() {
 
       // WhatsApp confirmación
       const serviceName = SERVICES.find(s => s.id === formData.service)?.name;
-      const message = `*TAIWAN BARBER*%0A` +
+      const message = `*DEMO BARBER*%0A` +
         `*Cliente:* ${formData.name.toUpperCase()}%0A` +
         `*Servicio:* ${serviceName}%0A` +
         `*Fecha:* ${formData.date}%0A` +
