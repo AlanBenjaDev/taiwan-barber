@@ -11,7 +11,7 @@ export default function Home() {
       <section className="h-[90vh] flex flex-col justify-center items-center px-6 text-center bg-black text-white relative overflow-hidden">
         <div className="z-10">
           <h1 className="text-6xl md:text-8xl font-black mb-4 tracking-tighter uppercase italic">
-            Taiwan <span className="text-red-600">Barber</span>
+            Tu <span className="text-red-600">Barber</span>
           </h1>
           <p className="text-sm tracking-[0.3em] uppercase text-gray-400 mb-8 animate-pulse">
             Precisión. Silencio. Arte.
