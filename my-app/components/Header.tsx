@@ -25,7 +25,7 @@ export default function Header() {
           <div className="w-8 h-8 bg-red-600 flex items-center justify-center text-white font-serif text-xl">
             台
           </div>
-          <span className="text-white text-lg font-bold tracking-[0.2em] uppercase">Taiwan</span>
+          <span className="text-white text-lg font-bold tracking-[0.2em] uppercase">Demo</span>
         </div>
 
         <nav className="hidden md:flex gap-8">
