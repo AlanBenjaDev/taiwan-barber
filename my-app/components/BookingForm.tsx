@@ -81,7 +81,7 @@ export default function BookingForm() {
         `*Fecha:* ${formData.date}%0A` +
         `*Hora:* ${formData.time}HS`;
       
-      window.open(`https://wa.me/5493541628322?text=${message}`, '_blank');
+      window.open(`https://wa.me/5493541225544?text=${message}`, '_blank');
       
       setFormData({ name: '', service: '', date: '', time: '' });
       setOccupiedSlots([]);
