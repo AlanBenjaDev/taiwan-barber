@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Taiwan Barber | Estética Oriental",
+  title: "La barber demo | Estética Oriental",
   description: "Precisión, silencio y arte en cada corte.",
   manifest: "/manifest.json",
 };
