@@ -6,7 +6,7 @@ const app: Application = express();
 
 // Configuración de CORS
 app.use(cors({
-  origin: 'https://taiwan-barber.vercel.app', 
+   origin: ['https://taiwan-barber.vercel.app', 'https://la-barber-demo.vercel.app'],
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization']
 }));
