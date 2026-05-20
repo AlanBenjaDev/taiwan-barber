@@ -73,7 +73,6 @@ export default function BookingForm() {
         throw new Error(errorData.error || "Turno ocupado recientemente");
       }
 
-      // WhatsApp confirmación
       const serviceName = SERVICES.find(s => s.id === formData.service)?.name;
       const message = `*DEMO BARBER*%0A` +
         `*Cliente:* ${formData.name.toUpperCase()}%0A` +
